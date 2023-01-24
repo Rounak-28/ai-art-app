@@ -9,15 +9,23 @@ export default function SignIn({ providers }: any) {
   }
 
   return (
-    <>
-      {Object.values(providers).map((provider: any) => (
-        <div key={provider.name}>
-          <button onClick={() => signIn(provider.id)}>
-            Sign in with {provider.name}
-          </button>
-        </div>
-      ))}
-    </>
+    <div className="w-screen h-screen flex justify-center items-center">
+      <div className="w-[40vw] h-[40vh] border-2 border-emerald-500 flex flex-col justify-center items-center">
+        {Object.values(providers).map((provider: any) => (
+          <div
+            key={provider.name}
+            className="w-full h-full flex justify-center items-center"
+          >
+            <button
+              className="w-[70%] h-14 bg-red-500"
+              onClick={() => signIn(provider.id)}
+            >
+              Sign in with {provider.name}
+            </button>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }
 
