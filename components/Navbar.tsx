@@ -1,11 +1,14 @@
 import Link from "next/link";
+import { useSession, signIn, signOut } from "next-auth/react"
 
 const Navbar = () => {
   return (
     <div className="h-14 w-screen bg-[#07080e] text-white flex items-center justify-between px-5 z-[999] fixed top-0 left-0">
       <div className="flex space-x-5 items-center">
         <Link href="/">
-          <div className="logo w-10 sm:w-20 md:w-40 flex justify-center items-center">LOGO</div>
+          <div className="logo w-10 sm:w-20 md:w-40 flex justify-center items-center">
+            LOGO
+          </div>
         </Link>
         <input
           type="text"
@@ -14,9 +17,9 @@ const Navbar = () => {
         />
       </div>
       <div className="flex space-x-4 md:space-x-5 items-center">
-        <Link href="/login">
-          <p>login</p>
-        </Link>
+        {/* <Link href="/login"> */}
+          <p onClick={() => signIn()}>login</p>
+        {/* </Link> */}
         {/* <div className="avatar w-9 h-9 bg-red-500 rounded-sm  cursor-pointer"></div> */}
         <button className="w-20 sm:w-24 md:w-28 h-9 bg-gradient-to-r from-green-200 to-green-500 rounded-sm text-black flex items-center justify-center hover:from-green-300 hover:to-green-600">
           Generate
