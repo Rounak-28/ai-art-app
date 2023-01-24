@@ -8,7 +8,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-[#15191e]">
-      <main className="columns-4 gap-4 py-2 px-4">
+      <main className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 py-2 px-4">
         <PostCard img={1}/>
         <PostCard img={2}/>
         <PostCard img={3}/>

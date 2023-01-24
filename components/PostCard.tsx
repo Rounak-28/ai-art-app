@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const PostCard = ({ img }: any) => {
   return (
-    <div className="py-2 rounded-lg">
+    <div className="py-2 rounded-lg w-fit mx-auto">
       <Image src={`/images/${img}.png`} width={400} height={400} alt="" className="rounded-lg" />
     </div>
   );
