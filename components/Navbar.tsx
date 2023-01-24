@@ -13,7 +13,7 @@ const Navbar = () => {
           placeholder="Search"
         />
       </div>
-      <div className="flex space-x-5">
+      <div className="flex space-x-5 items-center">
         <div className="avatar w-9 h-9 bg-red-500 rounded-sm  cursor-pointer"></div>
         <button className="w-28 h-9 bg-gradient-to-r from-green-200 to-green-500 rounded-sm text-black flex items-center justify-center hover:from-green-300 hover:to-green-600">
           Generate
