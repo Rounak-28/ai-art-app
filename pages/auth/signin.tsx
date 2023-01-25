@@ -12,7 +12,7 @@ export default function SignIn({ providers }: any) {
 
   return (
     <div className="w-screen h-screen flex justify-center md:items-center bg-[#15191e] text-white">
-      <div className="w-[85vw] mt-24 md:mt-0 md:w-[30vw] h-[500px] bg-black border-2 rounded-md">
+      <div className="w-[85vw] mt-24 md:mt-0 md:w-[70vw] lg:w-[50vw] xl:w-[40vw] h-[500px] bg-black border-2 rounded-md">
         <div className="top w-full h-[170px] flex flex-col justify-center items-center border-b-2 space-y-3">
           <div className="logo w-10 sm:w-20 md:w-40 flex justify-center items-center text-2xl">
             LOGO
