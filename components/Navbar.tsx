@@ -1,8 +1,10 @@
 import Link from "next/link";
 import { useSession, signIn, signOut } from "next-auth/react";
 import { FiLogIn, FiLogOut } from "react-icons/fi";
+import { useRouter } from "next/router";
 
 const Navbar = () => {
+  const router = useRouter();
   const { data: session } = useSession();
 
   return (
@@ -38,7 +40,10 @@ const Navbar = () => {
           </button>
         )}
         {/* <div className="avatar w-9 h-9 bg-red-500 rounded-sm  cursor-pointer"></div> */}
-        <button className="w-20 sm:w-24 md:w-28 h-9 bg-gradient-to-r from-green-200 to-green-500 rounded-sm text-black flex items-center justify-center hover:from-green-300 hover:to-green-600">
+        <button
+          className="w-20 sm:w-24 md:w-28 h-9 bg-gradient-to-r from-green-200 to-green-500 rounded-sm text-black flex items-center justify-center hover:from-green-300 hover:to-green-600"
+          onClick={() => router.push(session ? "/generate" : "/auth/signin")}
+        >
           Generate
         </button>
       </div>
