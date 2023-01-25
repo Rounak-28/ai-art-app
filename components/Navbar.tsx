@@ -9,20 +9,20 @@ const Navbar = () => {
     <div className="h-14 w-screen bg-[#07080e] text-white flex items-center justify-between px-5 z-[999] fixed top-0 left-0">
       <div className="flex space-x-5 items-center">
         <Link href="/">
-          <div className="logo w-10 sm:w-20 md:w-40 flex justify-center items-center">
+          <div className="logo w-9 sm:w-20 md:w-40 flex justify-center items-center">
             LOGO
           </div>
         </Link>
         <input
           type="text"
-          className="w-36 sm:w-64 md:w-80 h-8 rounded-sm outline-none border-[1px] border-[#fefefe6a] focus:border-2 focus:border-blue-500 indent-4 bg-black"
+          className="w-32 sm:w-64 md:w-80 h-8 rounded-sm outline-none border-[1px] border-[#fefefe6a] focus:border-2 focus:border-blue-500 indent-4 bg-black"
           placeholder="Search"
         />
       </div>
-      <div className="flex space-x-4 md:space-x-5 items-center">
+      <div className="flex space-x-2 sm:space-x-4 md:space-x-5 items-center">
         {session ? (
           <button
-            className="flex space-x-2 py-2 px-4 items-center hover:bg-[#222225]"
+            className="flex space-x-1 sm:space-x-2 py-2 px-4 items-center hover:bg-[#222225]"
             onClick={() => signOut()}
           >
             <FiLogOut />
@@ -30,7 +30,7 @@ const Navbar = () => {
           </button>
         ) : (
           <button
-            className="flex space-x-2 py-2 px-4 items-center hover:bg-[#222225]"
+            className="flex space-x-1 sm:space-x-2 py-2 px-4 items-center hover:bg-[#222225]"
             onClick={() => signIn()}
           >
             <FiLogIn />
