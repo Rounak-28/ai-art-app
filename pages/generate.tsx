@@ -40,19 +40,34 @@ const generate = () => {
     }
   };
   return (
-    <div className="bg-[#171a24] text-white flex flex-col space-y-4 justify-center items-center h-screen">
-      <input
-        type="text"
-        className="w-96 h-20 bg-[#110f1a] outline-none border-[1px] border-[#b8b6b668]"
-        onChange={(e) => setText(e.target.value)}
-      />
-      <button className="bg-blue-800 py-2 px-4" onClick={handleClick}>
-        try
-      </button>
-      <div className="w-[500px] h-[500px] border-[1px] border-[#b8b6b668] bg-[#111317]">
-        {data?.output && (
-          <Image src={data?.output[0]} width={100} height={100} alt=""></Image>
-        )}
+    <div className="bg-[#171a24] text-white flex flex-col space-y-4 items-center h-screen pt-6">
+      <span className="text-2xl">Generate art using AI</span>
+      <div className="w-[70vw] h-[500px] flex">
+        <div className="flex flex-col justify-center w-[50%] space-y-4">
+
+        <textarea
+          className="w-[90%] mx-auto my-4 py-3 h-60 bg-[#171717] outline-none border-[1px] border-[#b8b6b668] px-3 resize-none"
+          onChange={(e) => setText(e.target.value)}
+          placeholder="Enter your prompt..."
+          />
+        <button className="bg-blue-800 w-28 mx-auto py-2 px-4" onClick={handleClick}>
+          Generate
+        </button>
+          </div>
+        <div className="w-[50%] border-[1px] border-[#b8b6b668] bg-[#171717] flex justify-center items-center">
+          {data?.output ? (
+            <Image
+              src={data?.output[0]}
+              width={1000}
+              height={1000}
+              className="w-full h-full"
+              alt=""
+            ></Image>
+          )
+        :
+        <p>Generated Image will come here</p>
+        }
+        </div>
       </div>
     </div>
   );
